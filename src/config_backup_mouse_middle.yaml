@@ -1,0 +1,46 @@
+# BACKUP: Working WhisperWriter configuration with MOUSE_MIDDLE activation
+# Created as backup to preserve middle mouse button setup
+# To restore: copy this file over src/config.yaml
+
+misc:
+  hide_status_window: false
+  noise_on_completion: false
+  print_to_terminal: true
+model_options:
+  api:
+    api_key: null
+    base_url: https://api.openai.com/v1
+    model: whisper-1
+  common:
+    initial_prompt: null
+    language: null
+    temperature: 0.0
+  local:
+    compute_type: float32
+    condition_on_previous_text: true
+    device: cuda
+    model: medium.en
+    model_path: null
+    vad_filter: false
+  use_api: false
+output_options:
+  add_timestamp: true
+  create_directory: true
+  enable_clipboard: true
+  enable_file_output: false
+  file_output_mode: append
+  output_file_path: output/transcriptions.txt
+post_processing:
+  add_trailing_space: true
+  input_method: pynput
+  remove_capitalization: false
+  remove_trailing_period: false
+  writing_key_press_delay: 0.001
+recording_options:
+  activation_key: MOUSE_MIDDLE
+  input_backend: auto
+  min_duration: 100
+  recording_mode: press_to_toggle
+  sample_rate: 16000
+  silence_duration: 900
+  sound_device: null
